@@ -1,4 +1,6 @@
 class Api::MoviesController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   # GET /movies
   def show
       @movies = Movie.all
