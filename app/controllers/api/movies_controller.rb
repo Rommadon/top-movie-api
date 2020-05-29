@@ -1,6 +1,6 @@
 class Api::MoviesController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :set_movie, only: [:show, :update, :destroy]
+  before_action :set_movie, only: [:update, :destroy]
 
   # GET /movies
   def show
@@ -17,11 +17,6 @@ class Api::MoviesController < ApplicationController
       else
           render error: {error: 'Failed to add movie record'}, status: 400
       end
-  end
-
-  # GET /movies/:id
-  def show
-    render json: @movie
   end
 
   # PUT /movies/:id
