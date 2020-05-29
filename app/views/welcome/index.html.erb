@@ -1,1 +1,13 @@
-<h1>Hello, Rails!</h1>
+<div class="container-topic">
+  <h1>MY TOP MOVIE WEBSITE</h1>
+</div>
+<div class="container-movie-card">
+<% @movies.each do |m| %>
+  <div class="movie-card">
+    <div>Id: <%= m.id %></div>
+    <div>Name: <%= m.name %></div>
+    <div>Year: <%= m.year %></div>
+    <div>Genre: <%= m.genre %></div>
+  </div>
+<% end %>
+</div>
